@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card body">
+      <div class="card header  ">
+          <div class="card title">
+             <form method="POST" action="/update?id="+user._id>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                           <th>Name</th>
+                           <td><input class="form-control" value=user.name  name="name">                           
+                        </td> 
+                        </tr>
+                        <tr>
+                            <th>Ward</th>
+                           <td><input class="form-control" value=user.ward  name="ward">
+                        </td>
+                        </tr>
+                        <tr><th>Ward duration</th>
+                            <td><input class="form-control" value=user.wardduration  name="wardduration">  </td>
+                        </tr>
+                        <tr><th>NIN</th>
+                            <td><input class="form-control" value=user.NIN  name="NIN">  </td>
+
+                        </tr>
+                        <tr><th>Birth date</th>
+                            <td><input class="form-control" value=user.birthdate  name="birthdate">  </td>
+
+                        </tr>
+                        <tr><th>Registratin date</th>
+                            <td><input class="form-control" value=user.registrationdate  name="registrationdate">  </td>
+
+                        </tr>
+                        <tr><th>Home Address</th>
+                            <td><input class="form-control" value=user.homeaddress  name="homeaddress">  </td>
+
+                        </tr>
+                        <tr><th>Contact</th>
+                            <td><input class="form-control" value=user.contact  name="contact">  </td>
+
+                        </tr>
+                        <tr><th>Residence type</th>
+                            <td><input class="form-control" value=user.country  name="country">  </td>
+
+                        </tr>
+                        <tr><th>Activities</th>
+                            <td><input class="form-control" value=user.activities  name="activities">  </td>
+
+                        </tr>
+                        <tr><th>Gender</th>
+                            <td><input class="form-control" value=user.gender  name="gender">  </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button class="btn btn-dark btn-block" value="submit">Update
+
+                                </button>
+                            </td>
+                        </tr>
+        
+                    </thead>
+                </table>
+             </form> 
+          </div>
+
+      </div>  
+    </div>
+</div>
+</body>
+</html>

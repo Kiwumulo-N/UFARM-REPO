@@ -1,0 +1,70 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  title Document
+.container
+  h1 UBARN FARMER REGISTRATION FORM
+  form(method='POST' action='/uf')
+    .form-row
+      .col-md-3
+        label(for='example') Name
+        input#inputEmail4.form-control(type='text' name='name')
+        #nameErr.error
+      .col-md-3
+        label(for='inputEmail4') User Name:
+        input#inputEmail4.form-control(type='text' name='username')
+        #nameErr.error
+    .form-row
+      .col-md-3
+        label(for='ward') Ward:
+        input#inputPassword4.form-control(type='text' name='ward')
+        #nameErr.error
+      .col-md-3
+        label(for='ward duration') Ward Period:
+        input#inputEmail4.form-control(type='text' name='wardperiod')
+        #nameErr.error
+      .col-md-3
+        label(for='nin') NIN:
+        input#inputPassword4.form-control(type='text' name='NIN')
+        #nameErr.error
+    .form-row
+      .col-md-3
+        label(for='inputEmail4')  Birth date
+        input#inputEmail4.form-control(type='date' name='birthdate')
+        #nameErr.error
+      .col-md-3
+        label(for='inputPassword4') Registration date
+        input#inputPassword4.form-control(type='date' name='registrationdate')
+        #nameErr.error
+      .col-md-3
+        label(for='inputactivities') Activities
+        select#inputState.form-control(name='activities')
+          option(selected='') Choose Activities 
+          option Registers urban farmers
+          option Inspects the produce and agricultural activities
+          option Approves farmers produce to be uploaded
+          option Sees all bookings and orders
+        #nameErr.error
+      .form-row
+        .col-md-3
+          label(for='Contact') Contact
+          input#inputAddress2.form-control(type='text' name='contact')
+          #nameErr.error
+        .col-md-3
+          label(for='password') Password
+          input#inputAddress2.form-control(type='text' name='password')
+          #nameErr.error
+        .col-md-3
+          label(for='') Gender
+              input(type='radio' name='gender' value='male' )
+              | Male
+          label(for='')
+              input(type='radio' name='gender' value='female')
+              | Female
+    .form-group
+      button.btn.btn-primary(type='submit') Register

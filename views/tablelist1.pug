@@ -1,0 +1,50 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' )
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js') 
+  title Document
+.col-md-12
+  .card-body
+    .card-header
+      .card-title.breadcrumb REGISTRATION 
+    table.table.table-bordered
+      thead.thead-light
+        tr
+            th Name
+            th Ward
+            th Ward duration
+            th NIN
+            th Birth date
+            th Registration date
+            th Home Address
+            th Contact
+            th Residence type
+            th Activities
+            th Gender
+            th
+            th
+      tbody        
+      if users.length
+          each user in users
+            tr
+              td #{user.name}
+              td #{user.ward}
+              td #{user.wardduration} 
+              td #{user.NIN}
+              td #{user.birthdate}
+              td #{user.registrationdate}
+              td #{user.homeaddress}
+              td #{user.contact}
+              td #{user.country}
+              td #{user.activities} 
+              td #{user.gender}
+              td
+                  a(href='/update/'+ user._id)  Update
+              td
+                form(method='POST' action='/delete')
+                  input(type='hidden' placeholder='' name='id'  value='user._id')
+                  button.btn.btn-dark.btn-block(type='submit') Delete
+

@@ -1,0 +1,64 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  title Document
+.col-md-6
+  .card.body
+    .card.header
+      .card.title
+        form(method='POST' action='/update?id=' +user._id)
+          table.table
+            thead.thead-light
+              tr
+                th Name
+                td
+                  input.form-control(value='user.name' name='name')
+              tr
+                th Ward
+                td
+                  input.form-control(value='user.ward' name='ward')
+              tr
+                th Ward duration
+                td
+                  input.form-control(value='user.wardduration' name='wardduration')
+              tr
+                th NIN
+                td
+                  input.form-control(value='user.NIN' name='NIN')
+              tr
+                th Birth date
+                td
+                  input.form-control(value='user.birthdate' name='birthdate')
+              tr
+                th Registratin date
+                td
+                  input.form-control(value='user.registrationdate' name='registrationdate')
+              tr
+                th Home Address
+                td
+                  input.form-control(value='user.homeaddress' name='homeaddress')
+              tr
+                th Contact
+                td
+                  input.form-control(value='user.contact' name='contact')
+              tr
+                th Residence type
+                td
+                  input.form-control(value='user.country' name='country')
+              tr
+                th Activities
+                td
+                  input.form-control(value='user.activities' name='activities')
+              tr
+                th Gender
+                td
+                  input.form-control(value='user.gender' name='gender')
+              tr
+                td(colspan='2')
+                  button.btn.btn-dark.btn-block(value='submit')
+                    | Update
