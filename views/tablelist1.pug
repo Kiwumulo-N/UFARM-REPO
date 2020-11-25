@@ -10,16 +10,17 @@ head
   .card-body
     .card-header
       .card-title.breadcrumb REGISTRATION 
+      //- form(method='POST'  action='')
     table.table.table-bordered
       thead.thead-light
         tr
             th Name
+            th User Name
             th Ward
             th Ward duration
             th NIN
             th Birth date
             th Registration date
-            th Home Address
             th Contact
             th Residence type
             th Activities
@@ -31,15 +32,14 @@ head
           each user in users
             tr
               td #{user.name}
+              td #{user.username}
               td #{user.ward}
-              td #{user.wardduration} 
+              td #{user.wardperiod} 
               td #{user.NIN}
               td #{user.birthdate}
               td #{user.registrationdate}
-              td #{user.homeaddress}
+              td #{user.activities}
               td #{user.contact}
-              td #{user.country}
-              td #{user.activities} 
               td #{user.gender}
               td
                   a(href='/update/'+ user._id)  Update

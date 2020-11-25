@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const passportLocalMongoose=require("passport-local-mongoose");
 
 const reg2schema= new mongoose.Schema({
  name:{
@@ -6,7 +7,8 @@ const reg2schema= new mongoose.Schema({
  },
  username:{
      type:String,
-     unique:true
+    unique:true,
+    required:'Please enter your right username'
  },
  ward:{
      type:String
@@ -19,12 +21,13 @@ const reg2schema= new mongoose.Schema({
  contact:String,
  password:{
      type:String,
-     required:true
+     required:'Please enter password'
  },
  gender:[{
      type:String
  }]
 
-})
+});
 
+reg2schema.plugin(passportLocalMongoose);
 module.exports=mongoose.model('Registration2',reg2schema);

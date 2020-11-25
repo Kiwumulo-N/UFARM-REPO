@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+// const passportLocalMongoose=require("passport-local-mongoose");
 
 const regschema = new mongoose.Schema({
   name: {
@@ -30,4 +31,5 @@ const regschema = new mongoose.Schema({
   gender: String,
 });
 
+// Registration1.plugin(passportLocalMongoose);
 module.exports = mongoose.model("Registration1", regschema);

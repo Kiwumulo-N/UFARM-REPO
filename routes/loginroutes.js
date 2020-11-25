@@ -2,12 +2,12 @@
 const express=require('express');
 const router=express.Router();
 
- router.get('/',(req,res)=>{
-     res.render('fo_register');
+ router.get('/login',(req,res)=>{
+     res.render('ufarmlogin ');
  })
-router.post('/',(req,res)=>{
+router.post('/login',(req,res)=>{
     console.log(req.body);
-   res.render('fo_register');  
+   res.redirect('/login');  
  })
 
 

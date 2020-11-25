@@ -11,7 +11,7 @@ const expressSession = require('express-session')({
   resave: false,
   saveUninitialized: false
 });
-
+const Uploads=require('./models/Uploads')
 const Registration2=require('./models/Registration2')
 const Registration1=require('./models/Registration1')
 const regRoutes=require('./routes/registrationroutes');
@@ -40,21 +40,22 @@ app.set('view engine', 'pug')
 //middle ware
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static('public'));
+
 app.use(expressSession);
-
-
-
 app.use(passport.initialize());
 app.use(passport.session());
+
+//passport configs
+passport.use(Registration2.createStrategy());
+passport.serializeUser(Registration2.serializeUser());
+passport.deserializeUser(Registration2.deserializeUser());
+
+
+
 //using imported routes
-// app.use('/',loginRoutes);
+ app.use('/',loginRoutes);
 app.use('/',regRoutes);
 app.use('/',urbanregs);
-
-
-
-
-
 
 
 

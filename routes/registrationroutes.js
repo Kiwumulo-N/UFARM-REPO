@@ -3,6 +3,7 @@
 
 const express = require("express");
 const Registration1 = require("../models/Registration1");
+const Registration2 = require("../models/Registration2");
 const router = express.Router();
 
 router.get("/fo", (req, res) => {
@@ -24,7 +25,9 @@ router.post("/fo", async (req, res) => {
 
 router.get("/userlist", async (req, res) => {
   try {
-    let items = await Registration1.find();
+    // let items=await Registration2.find();
+    let items=await Registration1.find();
+
     console.log(items);
     res.render("tablelist1", { users: items });
   } catch (err) {

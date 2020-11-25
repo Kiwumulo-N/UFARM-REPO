@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  title PRODUCT LIST
+.container
+  h1 PRODUCT&apos;S LIST
+  form
+    .form-row
+      .col
+        label(for='example') Product Name
+        input.form-control(type='email' placeholder=' ' name='productname')
+        #productErr.error
+      .col
+        label(for='example') Ward Name
+        input.form-control(type='password' name='wardname')
+        #wardnameErr.error
+    .form-row
+      .col
+        label(for='example') Uploads Date
+        input.form-control(type='email' name='uploadsdate')
+        #dateErr.error
+      .col
+        label(for='example') Unit price in Ugx
+        input.form-control(type='password' name='unitprice')
+        #priceErr.error
+    .form-row
+      .col
+        label(for='example') Quantity
+        input.form-control(type='email' name='quantity')
+        #qualityErr.error
+      .col
+        label(for='example')  Payment Mode
+        select#pd.form-control(name='paymentmode')
+          option(value='') Choose your Mode of Payment
+          option(value='') Cash
+          option(value='') Mobile Money
+        #payErr.error
+    .form-row
+      .col
+        label(for='example') Delivery Mode
+        select#pd.form-control(name='deliverymode')
+          option(value='') Choose your Mode of delivery
+          option(value='') Pick up
+          option(value='') Home Delivery
+        #deliveryErr.error
+      .col
+        label(for='example') Produce Type
+        select#pd.form-control(name='producttype')
+          option(value='') Choose your product type
+          option(value='') Organic
+          option(value='') Non Organic
+        #producttErr.error
+    .form-row
+      .col
+        label(for='example') Directions
+        input.form-control(type='email' name='directions')
+        #productErr.error
+      .col
+        label(for='example') Products Availability
+        select#pd.form-control(name='productsavaibility')
+          option(value='') Lable the unavailable product with N/A
+          option(value='') N/A
+          option(value='') A
+        #productvErr.error
+    .form-row
+      .col
+        label(for='example') Product Image
+        input.form-control(type='email' name='productimage')
+        #productErr.error
+      .col
+        label(for='example') UserID No
+        input.form-control(type='email' name='userid')
+        #productvErr.error
+    .form-group
+      .col
+        input#exampleCheckbox.form-check-input(type='checkbox' )
+        label(for='exampleCheckbox') Sign me up to receive special promotions!
+        #productErr.error
+    button.btn.btn-primary(type='submit') Submit

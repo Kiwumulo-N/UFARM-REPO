@@ -1,0 +1,51 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' )
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js') 
+  title PRODUCTS LIST
+.col-md-12
+  .card-body
+    .card-header
+      .card-title.breadcrumb PRODUCTS LIST
+    table.table.table-bordered
+      thead.thead-light
+        tr
+            th Product Name
+            th Ward Name
+            th Uploads Date
+            th Unit price in Ugx
+            th Quantity
+            th Payment Mode
+            th Delivery Mode
+            th Produce Type
+            th Directions
+            th Products Availability
+            th UserID No
+            th
+            th
+      tbody        
+      if users.length
+          each user in users
+            tr
+              td #{user.productname}
+              td #{user.wardname}
+              td #{user.uploadsdate} 
+              td #{user.unitprice}
+              td #{user.quantity}
+              td #{user.paymentmode}
+              td #{user.deliverymode}
+              td #{user.producttype}
+              td #{user.directions}
+              td #{user.productsavaibility} 
+              td #{user.productimage}
+              td #{user.userid} 
+              td
+                  //- a(href='/update/'+ user._id)  Update
+              td
+                //- form(method='POST' action='/delete')
+                //-   input(type='hidden' placeholder='' name='id'  value='user._id')
+                //-   button.btn.btn-dark.btn-block(type='submit') Delete
+
