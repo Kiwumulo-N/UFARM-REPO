@@ -38,9 +38,6 @@ const uploadsschema= new mongoose.Schema({
        type:String,
        unique:true
    },
-   promos:{
-       type:String
-   },
 
 })
 

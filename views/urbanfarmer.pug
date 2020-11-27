@@ -13,58 +13,62 @@ head
     .form-row
       .col-md-3
         label(for='example') Name
-        input#inputEmail4.form-control(type='text' name='name')
+        input#name.form-control(type='text' name='name')
         #nameErr.error
       .col-md-3
         label(for='inputEmail4') User Name:
-        input#inputEmail4.form-control(type='text' name='username')
-        #nameErr.error
+        input#username.form-control(type='text' name='username')
+        #usernameErr.error
     .form-row
       .col-md-3
         label(for='ward') Ward:
-        input#inputPassword4.form-control(type='text' name='ward')
-        #nameErr.error
+        input#ward.form-control(type='text' name='ward')
+        #wardErr.error
       .col-md-3
         label(for='ward duration') Ward Period:
-        input#inputEmail4.form-control(type='text' name='wardperiod')
-        #nameErr.error
+        input#wardperiod.form-control(type='text' name='wardperiod')
+        #wardperiodErr.error
       .col-md-3
         label(for='nin') NIN:
-        input#inputPassword4.form-control(type='text' name='NIN')
-        #nameErr.error
+        input#NIN.form-control(type='text' name='NIN')
+        #NINErr.error
     .form-row
       .col-md-3
         label(for='inputEmail4')  Birth date
-        input#inputEmail4.form-control(type='date' name='birthdate')
-        #nameErr.error
+        input#birthdate.form-control(type='date' name='birthdate')
+        #birthdateErr.error
       .col-md-3
         label(for='inputPassword4') Registration date
-        input#inputPassword4.form-control(type='date' name='registrationdate')
-        #nameErr.error
+        input#registrationdate.form-control(type='date' name='registrationdate')
+        #regErr.error
       .col-md-3
         label(for='inputactivities') Activities
-        select#inputState.form-control(name='activities')
+        select#act.form-control(name='activities')
           option(selected='') Choose Activities 
           option Registers urban farmers
           option Inspects the produce and agricultural activities
           option Approves farmers produce to be uploaded
           option Sees all bookings and orders
-        #nameErr.error
+        #actErr.error
       .form-row
         .col-md-3
           label(for='Contact') Contact
-          input#inputAddress2.form-control(type='text' name='contact')
-          #nameErr.error
+          input#contact.form-control(type='text' name='contact')
+          #contactErr.error
         .col-md-3
           label(for='password') Password
-          input#inputAddress2.form-control(type='text' name='password')
-          #nameErr.error
+          input#password.form-control(type='text' name='password')
+          #passwordErr.error
         .col-md-3
-          label(for='') Gender
-              input(type='radio' name='gender' value='male' )
+            lable Gender
+            .form-inline
+              label
+              input(type='radio' name='gender' value='male' checked='' )
               | Male
-          label(for='')
+              label
               input(type='radio' name='gender' value='female')
               | Female
+            .error(name='genderErr')
+
     .form-group
       button.btn.btn-primary(type='submit') Register

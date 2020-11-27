@@ -9,29 +9,29 @@ head
   title PRODUCT LIST
 .container
   h1 PRODUCT&apos;S LIST
-  form
+  form(method='POST'  action='/uploads')
     .form-row
       .col
         label(for='example') Product Name
-        input.form-control(type='email' placeholder=' ' name='productname')
+        input.form-control(type='text' name='productname')
         #productErr.error
       .col
         label(for='example') Ward Name
-        input.form-control(type='password' name='wardname')
+        input.form-control(type='text' name='wardname')
         #wardnameErr.error
     .form-row
       .col
         label(for='example') Uploads Date
-        input.form-control(type='email' name='uploadsdate')
+        input.form-control(type='date' name='uploadsdate')
         #dateErr.error
       .col
         label(for='example') Unit price in Ugx
-        input.form-control(type='password' name='unitprice')
+        input.form-control(type='text' name='unitprice')
         #priceErr.error
     .form-row
       .col
         label(for='example') Quantity
-        input.form-control(type='email' name='quantity')
+        input.form-control(type='text' name='quantity')
         #qualityErr.error
       .col
         label(for='example')  Payment Mode
@@ -58,7 +58,7 @@ head
     .form-row
       .col
         label(for='example') Directions
-        input.form-control(type='email' name='directions')
+        input.form-control(type='text' name='directions')
         #productErr.error
       .col
         label(for='example') Products Availability
@@ -70,15 +70,15 @@ head
     .form-row
       .col
         label(for='example') Product Image
-        input.form-control(type='email' name='productimage')
+        input.form-control(type='text' name='productimage')
         #productErr.error
       .col
         label(for='example') UserID No
-        input.form-control(type='email' name='userid')
+        input.form-control(type='text' name='userid')
         #productvErr.error
     .form-group
       .col
         input#exampleCheckbox.form-check-input(type='checkbox' )
         label(for='exampleCheckbox') Sign me up to receive special promotions!
         #productErr.error
-    button.btn.btn-primary(type='submit') Submit
+    button.btn.btn-primary.btn-block(type='submit') CLICK TO UPLOAD PRODUCE

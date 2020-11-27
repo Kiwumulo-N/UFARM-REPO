@@ -58,7 +58,7 @@ res.status(400).send("unable to get the file from the database");
 router.post("/update",async(req,res)=>{
   try{
     await Registration1.findOneAndUpdate({_id:req.query.id},req.body);
-    res.redirect("tablelist1")
+    res.redirect("/userlist")
   
   }catch(err){
     console.log(err);

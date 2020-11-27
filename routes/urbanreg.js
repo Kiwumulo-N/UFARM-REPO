@@ -25,24 +25,31 @@ router.get('/uf',(req,res)=>{
 // })
 
 // implementing passport local mongoose
-router.post('/uf' ,(req,res)=>{
-  try{
-    const items= new Registration2(req.body);
-    Registration2.register(items,req.body.password, (err)=> {
-       if (err)
-        {
-          throw err
-        }
-        res.render('ufarmlogin')
-      })
-
-  }  catch(err) {
-    res.status(400).send('Sorry! something went wrong')
-    console.log(err)
+router.post('/uf' ,async(req,res)=>{
+  if(req.session.user) {
+    try{
+      const items= new Registration2(req.body);
+      await Registration2.register(items,req.body.password, (err)=> {
+         if (err)
+          {
+            throw err
+          }
+          res.render('ufarmlogin')
+        })
+  
+    }  catch(err) {
+      res.status(400).send('Sorry! something went wrong')
+      console.log(err)
+    }
+    }else {
+      console.log('cannot find seesion');
+      res.redirect('/login');
+  
   }
 })
 
-router.get('/productslist', async (req, res) => {
+router.get('/userlist', async (req, res) => {
+  if(req.session.user) {
   try {
     let items = await Registration2.find();
     console.log(items);
@@ -50,6 +57,10 @@ router.get('/productslist', async (req, res) => {
   } catch (err) {
     res.status(400).send('cannot find the registration lists');
   }
+}else {
+  console.log('cannot find seesion');
+  res.redirect('/login');
+}
 });
 
 

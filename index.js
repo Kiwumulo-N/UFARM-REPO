@@ -17,11 +17,11 @@ const Registration1=require('./models/Registration1')
 const regRoutes=require('./routes/registrationroutes');
 const loginRoutes=require('./routes/loginroutes');
 const urbanregs=require('./routes/urbanreg')
-
+const uploadsRoutes=require('./routes/uploadsroutes')
 
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 mongoose.connection
@@ -53,9 +53,10 @@ passport.deserializeUser(Registration2.deserializeUser());
 
 
 //using imported routes
- app.use('/',loginRoutes);
+app.use('/',loginRoutes);
 app.use('/',regRoutes);
 app.use('/',urbanregs);
+app.use('/',uploadsRoutes);
 
 
 

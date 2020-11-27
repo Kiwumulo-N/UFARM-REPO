@@ -19,10 +19,6 @@ const reg2schema= new mongoose.Schema({
  registrationdate:Date,
  activities:String,
  contact:String,
- password:{
-     type:String,
-     required:'Please enter password'
- },
  gender:[{
      type:String
  }]
