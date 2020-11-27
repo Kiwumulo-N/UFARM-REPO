@@ -7,8 +7,8 @@ const reg2schema= new mongoose.Schema({
  },
  username:{
      type:String,
-    unique:true,
-    required:'Please enter your right username'
+    // unique:true,
+    // required:'Please enter your right username'
  },
  ward:{
      type:String

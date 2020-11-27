@@ -4,43 +4,134 @@ const validate = (event)=>{
     event.preventDefault();
    const uname=document.getElementById('name');
    const nameError=document.getElementById('nameErr');
-
-   if(uname.value=='') {
+  // if(name.length <3 ||  name.length>50 ){
+    //         alert("check the length of the field");
+    //         return false;
+   if(uname.length <3 ||  uname.length>50) {
        uname.style.border='1px solid green';
        nameError.innerHTML='Field Required';
        nameError.style.color='red';
        // uname.focus();
-       // return false;
+        //return false;
    }
 
-   const uemail=document.getElementById('email');
-   const emailError=document.getElementById('emailErr');
+   const usname=document.getElementById('username');
+   const usnameError=document.getElementById('usnameErr');
    
-   if(uemail.value==''){
-       emailError.innerHTML='Put correct email';
-       emailError.style.color='Red';
-       uemail.focus();
+   var Regex2=/^[0-9a-zA-Z]+$/;
+
+   if(usname.value.match(Regex2)){
+        usname.style.border='';
+       usnameError.innerHTML='';
+       usnameError.style.color='';
+      //usname.focus();
+      // return false;
+   }else {
+    usname.style.border='1px solid green';
+    usnameError.innerHTML='Put correct username';
+    usnameError.style.color='Red';
+
    }
 
-   const uphone=document.getElementById('phone');
-   const phoneError=document.getElementById('phoneErr');
+   const uward=document.getElementById('ward');
+   const uwardError=document.getElementById('wardErr');
    
-   if(uphone.value==''){
-       phoneError.innerHTML='Put correct email';
-       phoneError.style.color='Red';
-       uphone.focus();
+   if(uward.value==''){
+       uwardError.innerHTML='Put correct email';
+       uwardError.style.color='Red';
+       //uward.focus();
+      // return false;
    }
 
-   const ucountry=document.getElementById('country');
-   const countryError=document.getElementById('countryErr');
+   const uwardperiod=document.getElementById('wardperiod');
+   const uwardperiodError=document.getElementById('wardperiodErr');
    
-   if(ucountry.value==''){
-       countryError.innerHTML='Put correct email';
-       countryError.style.color='Red';
-       ucountry.focus();
+   if(uwardperiod.value==''){
+       uwardperiodError.innerHTML='Put correct email';
+       uwardperiodError.style.color='Red';
+      // uwardperiod.focus();
+      // return false;
+   } 
+
+   const uNIN=document.getElementById('NIN');
+   const uNINError=document.getElementById('NINErr');
+   
+   if(uNIN.value==''){
+       uNINError.innerHTML='Put correct email';
+       uNINError.style.color='Red';
+      // uwardperiod.focus();
+      // return false;
+   } 
+
+   const ubd=document.getElementById('birthdate');
+   const ubdError=document.getElementById('birthdateErr');
+   
+   if(ubd.value==''){
+       ubdError.innerHTML='Put correct email';
+       ubdError.style.color='Red';
+      // uwardperiod.focus();
+      // return false;
+   } 
+
+   const urd=document.getElementById('registrationdate');
+   const urdError=document.getElementById('regErr');
+   
+   if(urd.value==''){
+       urdError.innerHTML='Put correct email';
+       urdError.style.color='Red';
+      // uwardperiod.focus();
+      // return false;
    }
+
+   const ucontact=document.getElementById('contact');
+   const contactError=document.getElementById('contactErr');
+  // if(name.length <3 ||  name.length>50 ){
+    //         alert("check the length of the field");
+    //         return false;
+    var Regex3=/^\d{10}$/ ;
+   if(ucontact.value.match(Regex3)) {
+       ucontact.style.border='';
+       contactError.innerHTML='';
+       contactError.style.color='';
+       // uname.focus();
+        //return false;
+   }else{
+    ucontact.style.border='1px solid green';
+    contactError.innerHTML='wrong contact';
+    contactError.style.color='red';
+
+   }
+
+   const upassword=document.getElementById('password');
+   const passwordError=document.getElementById('passwordErr');
+  // if(name.length <3 ||  name.length>50 ){
+    //         alert("check the length of the field");
+    //         return false;
+    var Regex2=/^[0-9a-zA-Z]+$/;
+
+   if(upassword.value.match(Regex2)) {
+       upassword.style.border='';
+       passwordError.innerHTML='';
+       passwordError.style.color='';
+       // uname.focus();
+        //return false;
+   }else{
+    upassword.style.border='1px solid green';
+    passwordError.innerHTML='wrong password';
+    passwordError.style.color='red';
+
+
+   }
+
+//creating two regexes for ward period, username & name
+   
+   
+
+
       
-
+// else {
+//     alert('The form has been successfully submited')
+// }
    
 
 

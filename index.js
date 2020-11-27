@@ -18,6 +18,7 @@ const regRoutes=require('./routes/registrationroutes');
 const loginRoutes=require('./routes/loginroutes');
 const urbanregs=require('./routes/urbanreg')
 const uploadsRoutes=require('./routes/uploadsroutes')
+const publics=require('./routes/publicsroutes')
 
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
@@ -57,6 +58,7 @@ app.use('/',loginRoutes);
 app.use('/',regRoutes);
 app.use('/',urbanregs);
 app.use('/',uploadsRoutes);
+app.use('/',publics)
 
 
 

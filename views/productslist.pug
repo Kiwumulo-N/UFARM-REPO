@@ -9,7 +9,7 @@ head
   title PRODUCT LIST
 .container
   h1 PRODUCT&apos;S LIST
-  form(method='POST'  action='/uploads')
+  form(method='POST'   action='/uploads')
     .form-row
       .col
         label(for='example') Product Name
@@ -36,36 +36,37 @@ head
       .col
         label(for='example')  Payment Mode
         select#pd.form-control(name='paymentmode')
-          option(value='') Choose your Mode of Payment
-          option(value='') Cash
-          option(value='') Mobile Money
+          option(value=' Choose your Mode of Payment') Choose your Mode of Payment
+          option(value=' Mobile Money') Cash
+          option(value=' Mobile Money') Mobile Money
         #payErr.error
     .form-row
       .col
         label(for='example') Delivery Mode
         select#pd.form-control(name='deliverymode')
-          option(value='') Choose your Mode of delivery
-          option(value='') Pick up
-          option(value='') Home Delivery
+          option(value='Choose your Mode of delivery') Choose your Mode of delivery
+          option(value='Pick up') Pick up
+          option(value='Home Delivery') Home Delivery
         #deliveryErr.error
       .col
         label(for='example') Produce Type
         select#pd.form-control(name='producttype')
-          option(value='') Choose your product type
-          option(value='') Organic
-          option(value='') Non Organic
+          option(value='Choose your product type') Choose your product type
+          option(value='Organic') Organic
+          option(value='Non Organic') Non Organic
         #producttErr.error
     .form-row
       .col
         label(for='example') Directions
-        input.form-control(type='text' name='directions')
-        #productErr.error
+        input#dir.form-control(type='text' name='directions')
+        #dirErr.error
       .col
         label(for='example') Products Availability
         select#pd.form-control(name='productsavaibility')
-          option(value='') Lable the unavailable product with N/A
-          option(value='') N/A
-          option(value='') A
+          option(value='Lable the unavailable product with N/A') Lable the unavailable product with N/A
+          option(value=' N/A') N/A
+          option(value=' A') A
+
         #productvErr.error
     .form-row
       .col
