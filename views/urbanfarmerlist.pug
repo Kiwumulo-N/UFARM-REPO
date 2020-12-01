@@ -12,7 +12,7 @@ head
       .card-title.breadcrumb REGISTRATION 
       div.form-row
         div.col.form-group.col-md-12   
-            form.search(action='/folist')
+            form.search(action='/userlist')
                 div.form-row
                     div.col-md-8
                         input.form-control(name='gender' placeholder="Enter your search term(gender) ...")
@@ -22,17 +22,15 @@ head
       thead.thead-light
         tr
             th Name
-            th Roles
             th User Name
+            th Roles
             th Ward
             th Ward Period
             th NIN
             th Birth date
             th Registration date
-            th Home Address
-            th Contact
-            th Residence type
             th Activities
+            th Contact
             th Gender
             th Password
             th
@@ -42,17 +40,15 @@ head
           each user in users
             tr
               td #{user.name}
-              td #{user.roles}
               td #{user.username}
+              td #{user.roles}
               td #{user.ward}
               td #{user.wardperiod} 
               td #{user.nin}
               td #{user.birthdate}
               td #{user.registrationdate}
-              td #{user.homeaddress}
-              td #{user.contact}
-              td #{user.residencetype}
               td #{user.activities}
+              td #{user.contact}
               td #{user.gender}
               td #{user.password}
               td

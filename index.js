@@ -47,11 +47,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //passport configs
-passport.use(Registration2.createStrategy());
-passport.serializeUser(Registration2.serializeUser());
-passport.deserializeUser(Registration2.deserializeUser());
 
-
+// passport.use(Registration1.createStrategy());
+// passport.serializeUser(Registration1.serializeUser());
+// passport.deserializeUser(Registration1.deserializeUser());
 
 //using imported routes
 app.use('/',loginRoutes);
@@ -59,6 +58,22 @@ app.use('/',regRoutes);
 app.use('/',urbanregs);
 app.use('/',uploadsRoutes);
 app.use('/',publics)
+
+
+app.post('/logout',(req,res)=>{
+if(req.session){
+  req.session.destroy(function (err){
+    if (err){
+
+    }else {
+      return res.redirect('/login')
+    }
+  })
+}
+
+  
+
+})
 
 
 

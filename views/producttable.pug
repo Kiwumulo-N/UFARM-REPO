@@ -26,7 +26,8 @@ head
             th Products Image
             th UserID No
             th
-      tbody        
+      tbody
+      if users.length
           each user in users
             tr
               td #{user.productname}
@@ -42,9 +43,4 @@ head
               td #{user.productimage}
               td #{user.userid} 
               td
-                  //- a(href='/update/'+ user._id)  Update
               td
-                //- form(method='POST' action='/delete')
-                //-   input(type='hidden' placeholder='' name='id'  value='user._id')
-                //-   button.btn.btn-dark.btn-block(type='submit') Delete
-

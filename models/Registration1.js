@@ -1,35 +1,39 @@
 const mongoose = require("mongoose");
-// const passportLocalMongoose=require("passport-local-mongoose");
+//const passportLocalMongoose=require("passport-local-mongoose");
 
 const regschema = new mongoose.Schema({
   name: {
-    type: String,
-    required: "Please enter your fullname",
+    type: String
+  },
+  roles:[{type:String}],
+  username:{
+    type:String,
+    unique:true,
+    required:'Please use the correct username'
   },
   ward: {
     type: Number
   },
-  wardduration: {
+  wardperiod: {
     type: Number
   },
-  NIN: {
+  nin: {
     type: Number
   },
   birthdate: {
-    type: Date
+    type: String
   },
   registrationdate: {
-    type: Date
+    type: String
   },
   homeaddress: String,
   contact: {
-    type: String,
-    required: "Please input the correct contact",
-  },
-  country: String,
-  activities: String,
-  gender: String,
+    type: String
+ },
+  residencetype: [{type:String}],
+  activities: [{type:String}],
+  gender: [{type:String}],
 });
 
-// Registration1.plugin(passportLocalMongoose);
+// regschema.plugin(passportLocalMongoose);
 module.exports = mongoose.model("Registration1", regschema);

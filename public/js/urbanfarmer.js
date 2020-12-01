@@ -1,18 +1,21 @@
 
-const validate = (event)=>{
-    console.log(event);
-    event.preventDefault();
+const validate = ()=>{
+    // console.log(event);
+    // event.preventDefault();
    const uname=document.getElementById('name');
    const nameError=document.getElementById('nameErr');
   // if(name.length <3 ||  name.length>50 ){
     //         alert("check the length of the field");
     //         return false;
-   if(uname.length <3 ||  uname.length>50) {
+    //uname.value.length <3 ||  uname.value.length>50
+   // /^[A-Za-z]{5,50}/
+
+   if(uname.value=='') {
        uname.style.border='1px solid green';
        nameError.innerHTML='Field Required';
        nameError.style.color='red';
        // uname.focus();
-        //return false;
+        return false;
    }
 
    const usname=document.getElementById('username');

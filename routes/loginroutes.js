@@ -29,6 +29,11 @@ router.post('/login',  passport.authenticate('local',), (req,res)=>{
     // {
     // res.redirect('/userlist')
     // }
+    // if (condition) {
+        
+    // } else {
+        
+    // }
     
     res.redirect('/userlist');
  })

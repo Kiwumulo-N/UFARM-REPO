@@ -112,4 +112,4 @@ if((nameErr|| emailErr||phoneErr ||countryErr||genderErr)=true){
 
 } 
 
-
+}

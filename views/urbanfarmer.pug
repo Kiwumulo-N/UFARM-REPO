@@ -3,14 +3,14 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
-  script(src='/js/class.js')
+  script(src='/js/urbanfarmer.js')
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
   title Document
 .container
   h1 UBARN FARMER REGISTRATION FORM
-  form(method='POST' action='/uf'  onsubmit='return validate(event)' name='form')
+  form(method='POST' action='/uf'  onsubmit='return validate()' name='form')
     .form-row
       .col-md-3
         label(for='example') Name
@@ -20,13 +20,20 @@ head
         label(for='inputEmail4') User Name:
         input#username.form-control(type='text' name='username')
         #usnameErr.error
+      .col-md-3
+        label(for='roles')  Roles
+        select#act.form-control(name='roles')
+          option(value='Default') Select your role
+          option(value='agricofficer') Agric officer
+          option(value='  farmerone') Farmerone
+          option(value='urbanfarmer') Urbanfarmer
     .form-row
       .col-md-3
         label(for='ward') Ward:
         input#ward.form-control(type='text' name='ward')
         #wardErr.error
       .col-md-3
-        label(for='ward duration') Ward Period:
+        label(for='ward period') Ward Period:
         input#wardperiod.form-control(type='text' name='wardperiod')
         #wardperiodErr.error
       .col-md-3
@@ -45,7 +52,7 @@ head
       .col-md-3
           label(for='activities') Activities
           select#act.form-control(name='activities')
-            option(value='Choose your activity ') Choose your activity
+            option(value='Default ') Choose your activity
             option(value='Uploading produce') Uploading produce
             option(value='Producing agricultural products') Producing agricultural products
           #actErr.error
@@ -55,19 +62,15 @@ head
           input#contact.form-control(type='text' name='contact')
           #contactErr.error
         .col-md-3
+          label(for='gender') Gender
+          select#act.form-control(name='gender')
+            option(value='Default ') Select your gender
+            option(value='male ') Male
+            option(value='female') Female
+          #actErr.error
+        .col-md-3
           label(for='password') Password
           input#password.form-control(type='text' name='password')
           #passwordErr.error
-        .col-md-3
-            lable Gender
-            .form-inline
-              label
-              input(type='radio' name='gender' value='male' checked='' )
-              | Male
-              label
-              input(type='radio' name='gender' value='female')
-              | Female
-            .error(name='genderErr')
-
     .form-group
       button.btn.btn-primary(type='submit') Register
