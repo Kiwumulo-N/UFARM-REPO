@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-
+// const passportLocalMongoose=require("passport-local-mongoose");
 const reg2schema= new mongoose.Schema({
  name:{
      type:String
@@ -29,5 +29,5 @@ const reg2schema= new mongoose.Schema({
  }
 
 });
-
+// reg2schema.plugin(passportLocalMongoose);
 module.exports=mongoose.model('Registration2',reg2schema);

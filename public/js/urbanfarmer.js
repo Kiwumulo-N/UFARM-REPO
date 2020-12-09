@@ -14,8 +14,7 @@ const validate = ()=>{
        uname.style.border='1px solid green';
        nameError.innerHTML='Field Required';
        nameError.style.color='red';
-       // uname.focus();
-        return false;
+       return false;
    }
 
    const usname=document.getElementById('username');
@@ -24,15 +23,19 @@ const validate = ()=>{
    var Regex2=/^[0-9a-zA-Z]+$/;
 
    if(usname.value.match(Regex2)){
-        usname.style.border='';
-       usnameError.innerHTML='';
-       usnameError.style.color='';
-      //usname.focus();
-      // return false;
-   }else {
     usname.style.border='1px solid green';
     usnameError.innerHTML='Put correct username';
     usnameError.style.color='Red';
+       return false;
+    //     usname.style.border='';
+    //    usnameError.innerHTML='';
+    //    usnameError.style.color='';
+      //usname.focus();
+      // return false;
+//    }else {
+//     usname.style.border='1px solid green';
+//     usnameError.innerHTML='Put correct username';
+//     usnameError.style.color='Red';
 
    }
 
@@ -43,7 +46,7 @@ const validate = ()=>{
        uwardError.innerHTML='Put correct email';
        uwardError.style.color='Red';
        //uward.focus();
-      // return false;
+       return false;
    }
 
    const uwardperiod=document.getElementById('wardperiod');
@@ -53,7 +56,7 @@ const validate = ()=>{
        uwardperiodError.innerHTML='Put correct email';
        uwardperiodError.style.color='Red';
       // uwardperiod.focus();
-      // return false;
+       return false;
    } 
 
    const uNIN=document.getElementById('NIN');
@@ -62,8 +65,7 @@ const validate = ()=>{
    if(uNIN.value==''){
        uNINError.innerHTML='Put correct email';
        uNINError.style.color='Red';
-      // uwardperiod.focus();
-      // return false;
+      return false;
    } 
 
    const ubd=document.getElementById('birthdate');
@@ -72,8 +74,7 @@ const validate = ()=>{
    if(ubd.value==''){
        ubdError.innerHTML='Put correct email';
        ubdError.style.color='Red';
-      // uwardperiod.focus();
-      // return false;
+       return false;
    } 
 
    const urd=document.getElementById('registrationdate');
@@ -82,8 +83,7 @@ const validate = ()=>{
    if(urd.value==''){
        urdError.innerHTML='Put correct email';
        urdError.style.color='Red';
-      // uwardperiod.focus();
-      // return false;
+       return false;
    }
 
    const ucontact=document.getElementById('contact');
@@ -93,15 +93,14 @@ const validate = ()=>{
     //         return false;
     var Regex3=/^\d{10}$/ ;
    if(ucontact.value.match(Regex3)) {
-       ucontact.style.border='';
-       contactError.innerHTML='';
-       contactError.style.color='';
-       // uname.focus();
-        //return false;
-   }else{
     ucontact.style.border='1px solid green';
     contactError.innerHTML='wrong contact';
     contactError.style.color='red';
+        return false;
+//    }else{
+//     ucontact.style.border='1px solid green';
+//     contactError.innerHTML='wrong contact';
+//     contactError.style.color='red';
 
    }
 
@@ -113,15 +112,14 @@ const validate = ()=>{
     var Regex2=/^[0-9a-zA-Z]+$/;
 
    if(upassword.value.match(Regex2)) {
-       upassword.style.border='';
-       passwordError.innerHTML='';
-       passwordError.style.color='';
-       // uname.focus();
-        //return false;
-   }else{
     upassword.style.border='1px solid green';
     passwordError.innerHTML='wrong password';
     passwordError.style.color='red';
+        return false;
+//    }else{
+//     upassword.style.border='1px solid green';
+//     passwordError.innerHTML='wrong password';
+//     passwordError.style.color='red';
 
 
    }
@@ -136,6 +134,6 @@ const validate = ()=>{
 //     alert('The form has been successfully submited')
 // }
    
-
+return (true);
 
 }

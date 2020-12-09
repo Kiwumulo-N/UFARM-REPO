@@ -8,16 +8,21 @@ router.get('/uf',(req,res)=>{
   res.render('urbanfarmer');
 })
 
+
 router.post("/uf", async (req, res) => {
-  try {
+  //  if(req.session.user){
+    try {
     let ubf = Registration2(req.body);
-    await ubf.save();
-    console.log("save was sucessful")
-    res.redirect("/farmerlist");
-  } catch(err) {
-    console.log(err);
-    res.status(400).send("save wasnot succesful");
+     await ubf.save();
+
+     console.log("save was sucessful")
+     res.redirect("/farmerlist");
   }
+catch (err) {
+    res.status(400).send('Sorry! Something went wrong.')
+    console.log(err)
+  }
+
 });
 
 router.get("/farmerlist",async(req,res)=>{

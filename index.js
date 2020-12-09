@@ -48,9 +48,9 @@ app.use(passport.session());
 
 //passport configs
 
-// passport.use(Registration1.createStrategy());
-// passport.serializeUser(Registration1.serializeUser());
-// passport.deserializeUser(Registration1.deserializeUser());
+// passport.use(Registration2.createStrategy());
+// passport.serializeUser(Registration2.serializeUser());
+// passport.deserializeUser(Registration2.deserializeUser());
 
 //using imported routes
 app.use('/',loginRoutes);
@@ -66,7 +66,7 @@ if(req.session){
     if (err){
 
     }else {
-      return res.redirect('/login')
+      return res.redirect('/uf')
     }
   })
 }

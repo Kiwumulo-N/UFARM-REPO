@@ -5,7 +5,7 @@ head
   title Document
 .container
   h1 FARMERONE REGISTRATION FORM
-  form(method='POST' action='/fo' onsubmit=' return validate()')
+  form#form(method='POST' action='/fo' onsubmit='return validate()')
     .form-row
       .col-md-6
         label(for='example')  Name
@@ -13,11 +13,12 @@ head
         #nameErr.error
       .col-md-3
         label(for='roles')  Roles
-        select#act.form-control(name='roles')
+        select#role.form-control(name='roles')
           option(value='Default') Select your role
           option(value='agricofficer') Agric officer
           option(value='  farmerone') Farmerone
           option(value='urbanfarmer') Urbanfarmer
+        #roleErr.error
       .col-md-3
         label(for='example') User Name
         input#user.form-control(type='username' name='username')
@@ -71,7 +72,7 @@ head
         #actErr.error
       .col
         label(for='gender')  Gender
-        select#act.form-control(name='gender')
+        select#gender.form-control(name='gender')
           option(value=' Default  ') Choose your gender   
           option(value=' male  ')  male  
           option(value='female') female
@@ -79,11 +80,11 @@ head
     .form-row
       .col-md-3
         label(for='password') Password
-        input#pass.form-control(type='text' name='password' )
+        input#pass.form-control(type='password' name='password' )
         #passErr.error
     .form-group
       button.btn.btn-success(type='submit') Register
-  script(src='/js/farmerone.js')
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  script(src='/js/farmerone.js')

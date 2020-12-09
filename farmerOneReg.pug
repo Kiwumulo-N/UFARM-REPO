@@ -1,0 +1,108 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="/css/registration.css")
+script(src="https://kit.fontawesome.com/8af5379226.js", crossorigin="anonymous")
+link(rel="shortcut icon", href="/images/favicon.jpg", type="image/x-icon")
+title FarmerOne Registration
+.container
+  .header
+    h2 FarmerOne Registration
+  form.form#form(method="POST" action="/farmerOne" onSubmit='return checkInput()' autocomplete="off")
+    .form-row
+      .form-group.col-md-12
+        label(for="names") Full name
+        input#names(name="names", type="text" placeholder="Patricia Nekesa")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="dob") Date Of Birth
+        input#dob(name="dob", type="date")
+        small Error Message
+      .form-group.col-md-6
+        label(for="dor") Date of Registration
+        input#dor(name="dor", type="date")
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="nin") National Id Number
+        input#nin(name="nin", type="text" placeholder="CF5R9IK097890")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="phone") Contact
+        input#phone(name="phone", type="number" placeholder="0786145913")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="ufid") UniqueID
+        input#ufid(name="ufid", type="text", placeholder="FO005")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="restype") Residence Type
+        select#restype.form-group(name="restype" type="text" placeholder="Select Residence Type")
+            option(value="select residence type") Select residence type
+            option(value="New") New Resident
+            option(value="Permanent") Permanent Resident
+            option(value="Temporary") Temporary Resident
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="ward") Ward Name
+        select#ward.form-group(name="ward" type="text" placeholder="Select Ward")
+          option(value="Select ward") Select Ward
+          option(value="Ward 1") Ward 1
+          option(value="Ward 2") Ward 2
+          option(value="Ward 3") Ward 3
+          option(value="Ward 4") Ward 4
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="acts") Farming Activities
+        select#acts.form-group(name="acts" type="text" placeholder="Select Activities")
+            option(value="Select Farming Activities") Select Farming Activities
+            option(value="Horticulture") Horticulture
+            option(value="Poultry") Poultry
+            option(value="Dairy") Dairy
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-row
+      .form-group.col-md-6
+        label(for="home") Address
+        input#home(name="home", type="text", placeholder="MasajjaA")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+      .form-group.col-md-6
+        label(for="stayperiod") Stay Period(Years)
+        select#stayperiod.form-group(name="stayperiod" type="text" placeholder="Select stayperiod")
+            option(value="Select your stay period range") Select your stay period range
+            option(value="0 to 10 years") 0 to 10 years
+            option(value="Over 10 years") 0ver 10 years
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    fieldset(style='margin-bottom:10px;')
+      legend Gender
+      .form-check(style='padding:3px;')
+        input.form-check-input#gender1(type="radio", name="gender", value="Female", checked)
+        label.form-check-label(for="gender1")(style='padding: 3px;')
+        |Female   
+      .form-check(style='padding: 3px;')
+        input.form-check-input#gender2(type="radio", name="gender", value="Male")
+        label.form-check-label(for="gender2")(style='padding: 3px;')
+        |Male         
+    button(type='submit') Register
+
+script(src="/js/validateFO.js")
+

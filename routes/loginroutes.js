@@ -5,9 +5,17 @@ const passport=require('passport')
 //const roles=require('roles');
 // const { farmerone } = require('../roles');
 // display the login page
- router.get('/login',(req,res)=>{
-     res.render('ufarmlogin');
+ router.get('/',(req,res)=>{
+     res.render('uhome');
  })
+
+//  router.get('/login',(req,res)=>{
+//      res.render('ufarmlogin');
+//  })
+//  router.post('/login', (req,res)=>{
+//      res.redirect('ptable');
+//  })
+ 
 
 //  var roles ={
 //     farmerone:'farmerone',
@@ -18,8 +26,8 @@ const passport=require('passport')
 
  //process the user name & password that are  submitted  in the login page
  //{failureRedirect:'/login'}
-router.post('/login',  passport.authenticate('local',), (req,res)=>{
-    req.session.user= req.user;
+// router.post('/login',  passport.authenticate('local',), (req,res)=>{
+    // req.session.user= req.user;
     // const userRoles= roles[req.user.roles]
     // if (userRoles == 'farmerone')
     // {
@@ -35,8 +43,7 @@ router.post('/login',  passport.authenticate('local',), (req,res)=>{
         
     // }
     
-    res.redirect('/userlist');
- })
+    // res.redirect('/userlist');
 
 
 

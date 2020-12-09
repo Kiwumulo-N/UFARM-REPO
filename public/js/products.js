@@ -2,16 +2,35 @@
 const validate = ()=>{
     // console.log(event);
     // event.preventDefault();
+    // ^
+    
    const upn=document.getElementById('product');
    const pnError=document.getElementById('productErr');
 
-   if(upn.value=='') {
-       upn.style.border='1px solid green';
-       pnError.innerHTML='Field Required';
-       pnError.style.color='red';
-       // uname.focus();
-       // return false;
+//    if(upn.value=='') {
+//        upn.style.border='1px solid green';
+//        pnError.innerHTML='Field Required';
+//        pnError.style.color='red';
+//        // uname.focus();
+//         return false;
+//    }
+
+//    const upn=document.getElementById('product');
+//    const pnError=document.getElementById('Err');
+
+   var Regex3=/^\d{10}$/ ;
+   if(upn.value.match(Regex3)) {
+    upn.style.border='1px solid green';
+    pnError.innerHTML='wrong contact';
+    pnError.style.color='red';
+        return false;
+//    }else{
+//     ucontact.style.border='1px solid green';
+//     contactError.innerHTML='wrong contact';
+//     contactError.style.color='red';
+
    }
+
 
 //     const userv=document.getElementById('user');
 //     const userError=document.getElementById('userErr');
@@ -95,7 +114,7 @@ const validate = ()=>{
 // }
 
 
-
+return (true);
 
 }
 

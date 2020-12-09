@@ -86,7 +86,7 @@ router.get("/folist", async (req, res) => {
 // });
 
 router.get("/update/:id" ,async(req,res)=>{
-  if(req.session.user){
+  // if(req.session.user){
     try{
       const updatefo =await  Registration1.findOne({_id:req.params.id})
       res.render("update",{user:updatefo});
@@ -96,10 +96,10 @@ router.get("/update/:id" ,async(req,res)=>{
   res.status(400).send("unable to get the file from the database");
     }
   
-  }else {
-    console.log('cannot find seesion');
-    res.redirect('/login');
-  }
+  // }else {
+  //   console.log('cannot find seesion');
+  //   res.redirect('/login');
+  // }
 
 })
 
