@@ -88,38 +88,40 @@ const validate = ()=>{
         userv.style.border='1px solid green';
     
     };
-    let text = /^[A-Za-z]+$/    
-      if(uwar.value==''){
+    // let text = /^[A-Za-z]+$/
+    let Regex5=/^\d{1}$/;
+    if(uwar.value==''){
        warError.innerHTML='Field Required';
        warError.style.color='red';
        uwar.style.border='1px solid red';
        return false
    }
-   else if(!uwar.value.match(text)){
+   else if(!uwar.value.match(Regex5)){
        warError.innerHTML='Provide a valid ward no';
        warError.style.color='red';
        uwar.style.border='1px solid red';
        return false
    }
-   else if (uwar.value.match(text)){
+   else if (uwar.value.match(Regex5)){
     uwar.style.border='1px solid green';
 
 };
 
-    let nan = /^((?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]{13})+$/;
-       if(unin.value==''){
+    // let nan = /^((?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]{13})+$/;
+    let Regex4=/^\d{10}$/;
+    if(unin.value==''){
         ninError.innerHTML='Field Required';
         ninError.style.color='red';
         unin.style.border='1px solid red';
         return false
     }
-    else if(!unin.value.match(nan)){
+    else if(!unin.value.match(Regex4)){
         ninError.innerHTML='Provide a valid nin no';
         ninError.style.color='red';
         unin.style.border='1px solid red';
         return false
     }
-    else if (unin.value.match(nan)){
+    else if (unin.value.match(Regex4)){
         unin.style.border='1px solid green';
     
     };
